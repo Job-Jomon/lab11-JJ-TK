@@ -30,6 +30,11 @@ def sub(a, b):
 def mul(a, b):
     return a * b
 
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a
+
 def log(a, b):
     if b<=0 or a<=0 or a ==1:
         raise ValueError
@@ -46,12 +51,12 @@ def multiply(a, b):
 
 def divide(a, b):
     if a == 0:
-        raise ZeroDivisionError("Division by zero is not allowed.")
+        raise ZeroDivisionError
     return b / a
 
 def logarithm(a, b):
     if a <= 0 or a == 1 or b <= 0:
-        raise ValueError("Invalid arguments for logarithm. Base must be > 0 and != 1; value must be > 0.")
+        raise ValueError
     return math.log(b, a)
 
 def exponent(a, b):
